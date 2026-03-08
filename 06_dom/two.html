@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="title" content="dom">
+    <meta name="description" content="dom">
+    <meta name="keywords" content="blog, article, education">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    <meta name="author" content="Sayed Mohammed Asim">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Manipulation</title>
+    
+</head>
+<body style="background-color: #212121; color:#fff;">
+
+  <div class="parent">
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+  </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    console.log(parent); //parent class
+    console.log(parent.children) //parent class childs -> days
+    console.log(parent.children[1].innerHTML); //Tuesday
+    // for(let i=0;i<parent.children.length;i++){
+    //     console.log(parent.children[i].innerHTML); //print call childs
+    // }
+    console.log(parent.firstElementChild); //parent.firstElementChild == parent.children[0]
+    console.log(parent.lastElementChild); //parent.lastElementChild == parent.children[size-1]
+     const dayOne = document.querySelector('.day')
+    console.log(dayOne); //monday it choose the first element with class name day
+    console.log(dayOne.parentElement); //parent of monday -> parent
+    console.log(dayOne.nextElementSibling); //Tuesday
+
+    console.log("NODE:",parent.childNodes) // shows all DOM nodes (objects) shows the tree stucture
+</script>
+
+</html> 

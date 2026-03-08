@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="title" content="dom">
+    <meta name="description" content="dom">
+    <meta name="keywords" content="blog, article, education">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    <meta name="author" content="Sayed Mohammed Asim">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Manipulation</title>
+    
+</head>
+<body style="background-color: #212121; color:#fff;">
+
+  
+</body>
+<script>
+    // creating a div with its node
+   const div = document.createElement('div');
+   console.log(div);
+   div.className ="main";
+   div.id=Math.round(Math.random()*10+1)
+   div.setAttribute("title","generated title");
+   div.style.backgroundColor="yellow";
+    div.style.color="red";
+   div.style.padding="15px";
+//    div.innerText="asim toh sheraa ";
+const addText = document.createTextNode("asim toh asolei shera");
+div.appendChild(addText)
+document.body.appendChild(div);
+</script>
+
+</html> 

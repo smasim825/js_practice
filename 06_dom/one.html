@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="title" content="DOM">
+    <meta name="description" content="DOM">
+    <meta name="keywords" content="blog, article, education">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    <meta name="author" content="Sayed Mohammed Asim">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+    .bg-black{
+        background-color :#212121;
+        color:#ffffff;
+    }
+ </style>
+</head>
+<body class="bg-black">
+   <div>
+     <h1 id="title" class="heading">Dom learning with chai with code 
+        <span style="display : none">test text</span>
+     </h1>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, quam.
+     </p>
+     <input type="password" name="" id="">
+     <ul>
+        <li class="list-item">one</li>
+        <li class="list-item">two</li>
+        <li class="list-item">three</li>
+     </ul>
+   </div>
+ 
+   
+</body>
+<script>
+    // Selectors ( ID / ClassName / TagNames )
+    // Classnames and tags are pularl so the are ElementsBy
+    // Id is single so ElementBy
+    document.getElementById('title').getAttribute('id');
+    document.getElementById('title').setAttribute('id','new title'); // change name title to  new title
+    const temp = document.getElementById('title');
+    temp.style.color='red';
+    temp.style.backgroundColor='green';
+    temp.style.padding='20px';
+    temp.innerText='asim'; // visible text
+    temp.textContent; // visible or unvisible values
+    temp.innerHTML; // text with attributes
+    const cls = document.getElementsByClassName('list-item');
+    // class doesnt have array method so we need to convert it to array
+    const arr = Array.from(cls);
+    arr.forEach (function(l){
+        console.log(l.innerText);
+    })
+    // or use QuerySelector
+    const cls2 = document.querySelectorAll('.list-item');
+    cls2.forEach (function(l){
+        console.log(l.innerText);
+    })
+    // query selector has array methods so no need of conversion to array
+</script>
+</html>
+
+ <!-- 1) Selecting through ID 
+       document.getElementsById('myID'); 
+       In html we access Id using (#) like if id=“myID” then access like #myID.
+  2) Selecting through Class .
+      document.getElementsByClassName(“myClass”)
+       We use class for access many elements or objects of html code  
+    In html we access class using (dot.) like if class=“myClass” then access like .myClass     
+  3) Selecting through tag.
+      document.getElementByTagName(“p”)
+    Tags like h1 h2 h3 h4 h5 p span a etc 
+
+Better for all.                                                                                                  
+Query Selector           returns NodeList
+document.querySelector('myID/myClass/tag') ID==> #title className=> .heading
+//returns first element
+document.querySelectorAll(“myID/myClass/tag”)
+//returns a NodeList
+Attributes
+ getAttribute(attr) // to get the attribute value
+setAttribute(attr,value) // to set the attribute value change -->
+
+
