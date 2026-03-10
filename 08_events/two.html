@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events </title>
+</head>
+<body>
+    <h1>Asim learn Web js</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const namePrint = function(){
+        console.log("my name is asim");
+    }
+   setTimeout(namePrint ,2000)
+    const changeH1 = function(){
+         document.querySelector('h1').innerHTML = "best js series"
+    }
+    const changeMe = setTimeout(changeH1 ,2000)
+    document.querySelector('#stop').addEventListener('click',function(){
+          clearTimeout(changeMe);
+          console.log("STOPPED");
+    }) // now it doesnt change the h1 if press stop before setTimeout
+</script>
+
+</html>  
