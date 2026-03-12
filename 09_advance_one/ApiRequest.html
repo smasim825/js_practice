@@ -1,0 +1,28 @@
+<!-- color change randomly using key buttons-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Color</title>
+</head>
+<body style = "background-color : #212121">
+
+
+<script>
+   const xhr =  new XMLHttpRequest() // it is a preferces so we need to create an object first
+   const reqURL = 'https://api.github.com/users/smasim825'
+   xhr.open('GET',reqURL) // ('method', 'string')
+   // but is has not send rquest yet we have to call open 
+   xhr.onreadystatechange = function(){
+    console.log(xhr.readyState);
+    if(xhr.readyState === 4){
+        const data = JSON.parse(this.responseText); // this is string formate data not object so convert to obj needed
+        // console.log(data);
+        console.log(data.html_url);
+    }
+   } // whenevr state change it will execute
+   xhr.send()
+
+</script>
+
+</body>
+</html>
